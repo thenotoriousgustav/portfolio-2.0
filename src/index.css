@@ -1,13 +1,43 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@font-face {
+  font-family: "PPNeueMachina-PlainRegular";
+  src: url("../public/assets/fonts/PPNeueMachina-PlainRegular.otf")
+    format("otf");
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+body {
+  @apply scroll-smooth bg-background;
+}
+
+/* PROGRESS BAR */
+progress {
+  position: fixed;
+  top: 0;
+  left: 0;
+  -webkit-appearance: none;
+  appearance: none;
+  width: 100%;
+  height: 3px;
+  border: none;
+  background: transparent;
+}
+
+progress::-webkit-progress-bar {
+  background: transparent;
+}
+progress::-webkit-progress-value {
+  background: white;
+  background-attachment: fixed;
+}
+progress::-moz-progress-bar {
+  background: white;
+  background-attachment: fixed;
+}
+
+/* NAVIGATION HOVER */
+.nav-hover {
+  @apply inline-block h-8 w-8 scale-0 transform object-cover transition-all group-hover:scale-100 lg:h-28 lg:w-48;
 }
