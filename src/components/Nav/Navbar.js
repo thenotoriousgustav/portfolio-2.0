@@ -15,9 +15,16 @@ export default function Navbar() {
   const menu2 = useRef();
   const menu3 = useRef();
   const menu4 = useRef();
+  const menu5 = useRef();
 
   useEffect(() => {
-    const menus = [menu1.current, menu2.current, menu3.current, menu4.current];
+    const menus = [
+      menu1.current,
+      menu2.current,
+      menu3.current,
+      menu4.current,
+      menu5.current,
+    ];
     tl.current = gsap.timeline({
       paused: true,
       reversed: true,
@@ -41,7 +48,7 @@ export default function Navbar() {
 
   return (
     <nav>
-      <div className='fixed z-10 flex w-full justify-between px-4 py-5 text-green-500 lg:px-14'>
+      <div className='fixed z-50 flex w-full justify-between px-4 py-5 text-green-500 lg:px-14'>
         <h3>GUSTAM.</h3>
         <button onClick={() => setNavbar(!navbar)}>
           {navbar ? (
@@ -79,33 +86,39 @@ export default function Navbar() {
       </div>
 
       <div
-        className='fixed -left-full block h-screen w-screen bg-white pt-24 font-neue text-2xl text-black md:pt-8 md:text-5xl lg:text-7xl'
+        className='fixed -left-full z-40 block h-screen w-screen bg-white pt-24 font-neue text-4xl text-black md:pt-8 md:text-5xl lg:text-7xl'
         ref={slide}
       >
-        <ul className='mt-10 flex flex-col space-y-8 text-center md:space-y-0'>
+        <ul className='mt-24 flex flex-col text-center xs:space-y-5 md:mt-10 md:space-y-0'>
           <li ref={menu1} className='group'>
             <img src='2.png' alt='images' className='nav-hover'></img>
-            <a href='/' className='px-8'>
-              PLAYGROUND
+            <a href='/' className='xs:px-2 md:px-8'>
+              HOME
             </a>
           </li>
           <li ref={menu2} className='group'>
-            <a href='/' className='px-8'>
-              ABOUT ME
+            <a href='/' className='xs:px-2 md:px-8'>
+              ABOUT
             </a>
             <img src='2.png' alt='images' className='nav-hover'></img>
           </li>
           <li ref={menu3} className='group'>
             <img src='2.png' alt='images' className='nav-hover'></img>
-            <a href='/' className='px-8'>
+            <a href='/' className='xs:px-2 md:px-8'>
               PROJECT
             </a>
           </li>
           <li ref={menu4} className='group'>
-            <a href='/' className='px-8'>
-              CONTACT
+            <a href='/' className='xs:px-2 md:px-8'>
+              ARCHIVE
             </a>
             <img src='2.png' alt='images' className='nav-hover'></img>
+          </li>
+          <li ref={menu5} className='group'>
+            <img src='2.png' alt='images' className='nav-hover'></img>
+            <a href='/' className='xs:px-2 md:px-8'>
+              CONTACT
+            </a>
           </li>
         </ul>
       </div>

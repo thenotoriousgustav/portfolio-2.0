@@ -1,13 +1,21 @@
 export default function Footer() {
   return (
-    <main className='mt-24 lg:mt-48' id='footer'>
-      <div className='relative z-10 flex h-[61vh] items-center justify-center bg-background'>
+    <main className='mt-32 lg:mt-48' id='footer'>
+      <div className='z-0 flex overflow-hidden bg-background text-4xl md:text-6xl lg:text-7xl'>
+        <h1 className='marquee '>
+          AVAILABLE FOR WORK - CONTACT ME - AVAILABLE FOR WORK - CONTACT ME -
+        </h1>
+        <h1 className='marquee2 marquee '>
+          AVAILABLE FOR WORK - CONTACT ME - AVAILABLE FOR WORK - CONTACT ME -
+        </h1>
+      </div>
+      <div className='relative z-0 flex h-[45vh] items-center justify-center bg-background md:h-[65vh]'>
         <h1 className='-mb-16 text-center font-neue text-4xl text-white lg:text-9xl'>
-          GET IN TOUCH
+          GET IN TOUCH!
         </h1>
       </div>
 
-      <footer className='sticky left-0 bottom-0 -z-10 h-[60vh] w-screen bg-gray-500 p-4 text-white lg:p-8'>
+      <footer className='sticky left-0 bottom-0 -z-10 h-[40vh] w-screen bg-gray-400 p-4 text-white md:h-[60vh] lg:p-8'>
         <h3 className='text-lg'>Contact:</h3>
         <div className='space-x-8 underline underline-offset-2'>
           <a href='/'>WHATSAPP</a>
@@ -16,12 +24,12 @@ export default function Footer() {
 
         <div className='mt-16'>
           <p className='text-xl'>Email me:</p>
-          <a href='/' className='text-2xl lg:text-8xl'>
+          <a href='/' className='text-3xl lg:text-8xl'>
             rhezagustam@gmail.com
           </a>
         </div>
 
-        <div className='mt-14 flex flex-wrap items-center justify-center md:justify-between lg:mt-20 '>
+        <div className='mt-16 flex flex-wrap items-center justify-center md:justify-between lg:mt-20 '>
           <div className='flex items-center space-x-8'>
             <p>Twitter</p>
             <p>Instagram</p>

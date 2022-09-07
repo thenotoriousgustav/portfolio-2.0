@@ -39,5 +39,26 @@ progress::-moz-progress-bar {
 
 /* NAVIGATION HOVER */
 .nav-hover {
-  @apply inline-block h-8 w-8 scale-0 transform object-cover transition-all group-hover:scale-100 lg:h-28 lg:w-48;
+  @apply inline-block scale-0 transform object-cover transition-all group-hover:scale-100 xs:h-14 xs:w-24 lg:h-28 lg:w-44;
+}
+
+.marquee {
+  animation: scrollText 12s infinite linear;
+  white-space: nowrap;
+  color: white;
+  transition: all 1s ease;
+  display: inline-block;
+}
+
+.marquee2 {
+  transition: all 1s ease;
+}
+
+@keyframes scrollText {
+  from {
+    transform: translateX(0%);
+  }
+  to {
+    transform: translateX(-100%);
+  }
 }

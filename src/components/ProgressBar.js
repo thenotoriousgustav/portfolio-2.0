@@ -18,5 +18,7 @@ export default function ProgressBar() {
     });
   });
 
-  return <progress max='100' value='0' ref={progress}></progress>;
+  return (
+    <progress max='100' value='0' ref={progress} className='z-20'></progress>
+  );
 }

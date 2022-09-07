@@ -49,14 +49,14 @@ export default function ProjectSection() {
         {dataProject.map(({ img, title, id }) => {
           return (
             <div
-              className='group relative border-b py-8 text-[#b0b0b0] hover:text-white'
+              className='group relative border-b py-8 text-secondary hover:text-white'
               ref={addToRefs}
               key={id}
             >
               <img
                 src={img}
                 alt='Project Images'
-                className='invisible absolute z-10 h-80 w-[550px] -translate-x-1/2 -translate-y-1/2 transform object-cover opacity-0'
+                className='invisible absolute z-10 hidden h-80 w-[550px] -translate-x-1/2 -translate-y-1/2 transform object-cover opacity-0 lg:block'
               ></img>
               <div className='flex transform items-center justify-between'>
                 <h2 className='w-7/12 font-neue text-xl uppercase lg:text-4xl'>

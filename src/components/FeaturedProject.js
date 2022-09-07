@@ -2,7 +2,7 @@ import { dataFeatured } from "../data";
 
 export default function FeaturedProject() {
   return (
-    <section className='mt-28 px-4 text-white lg:mt-48 lg:px-14'>
+    <section className='mt-32 px-4 text-white lg:mt-48 lg:px-14'>
       <h2 className='font-neue text-4xl'>FEATURED PROJECTS.</h2>
       <div className='flex flex-col space-y-10'>
         {dataFeatured.map(({ img, title, id }) => {
