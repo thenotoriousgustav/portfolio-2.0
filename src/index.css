@@ -43,9 +43,8 @@ progress::-moz-progress-bar {
 }
 
 .marquee {
-  animation: scrollText 12s infinite linear;
+  animation: scrollText 15s infinite linear;
   white-space: nowrap;
-  color: white;
   transition: all 1s ease;
   display: inline-block;
 }
@@ -61,4 +60,8 @@ progress::-moz-progress-bar {
   to {
     transform: translateX(-100%);
   }
+}
+
+.word-spacing {
+  word-spacing: 3.8rem;
 }

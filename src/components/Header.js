@@ -1,20 +1,7 @@
-import { useEffect, useRef } from "react";
-import { gsap } from "gsap";
 import ProgressBar from "./ProgressBar";
 import CircularText from "./CircularText";
 
 export default function Header() {
-  const rotate = useRef();
-
-  useEffect(() => {
-    gsap.to(rotate.current, {
-      rotation: 360,
-      repeat: -1,
-      duration: 13,
-      ease: "none",
-    });
-  });
-
   return (
     <>
       <ProgressBar />
@@ -35,7 +22,7 @@ export default function Header() {
           </p>
         </div>
 
-        <CircularText rotate={rotate} />
+        <CircularText>SCROLL TO EXPLORE SCROLL TO EXPLORE</CircularText>
 
         <div className='mt-10 text-end md:mt-28'>
           <h2 className='font-neue text-xl md:text-4xl lg:text-5xl'>

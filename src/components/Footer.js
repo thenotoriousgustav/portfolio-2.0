@@ -1,14 +1,9 @@
+import Marquee from "./Marquee";
+
 export default function Footer() {
   return (
-    <main className='mt-32 lg:mt-48' id='footer'>
-      <div className='z-0 flex overflow-hidden bg-background text-4xl md:text-6xl lg:text-7xl'>
-        <h1 className='marquee '>
-          AVAILABLE FOR WORK - CONTACT ME - AVAILABLE FOR WORK - CONTACT ME -
-        </h1>
-        <h1 className='marquee2 marquee '>
-          AVAILABLE FOR WORK - CONTACT ME - AVAILABLE FOR WORK - CONTACT ME -
-        </h1>
-      </div>
+    <main className='mt-28 lg:mt-48' id='footer'>
+      <Marquee />
       <div className='relative z-0 flex h-[45vh] items-center justify-center bg-background md:h-[65vh]'>
         <h1 className='-mb-16 text-center font-neue text-4xl text-white lg:text-9xl'>
           GET IN TOUCH!

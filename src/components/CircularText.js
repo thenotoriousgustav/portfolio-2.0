@@ -1,4 +1,18 @@
-export default function CircularText({ rotate }) {
+import { useEffect, useRef } from "react";
+import { gsap } from "gsap";
+
+export default function CircularText({ children }) {
+  const rotate = useRef();
+
+  useEffect(() => {
+    gsap.to(rotate.current, {
+      rotation: 360,
+      repeat: -1,
+      duration: 13,
+      ease: "none",
+    });
+  });
+
   return (
     <svg
       viewBox='0 0 100 100'
@@ -22,7 +36,7 @@ export default function CircularText({ rotate }) {
           href='#circle'
           className='font-neue font-light tracking-widest'
         >
-          SCROLL TO EXPLORE SCROLL TO EXPLORE
+          {children}
         </textPath>
       </text>
     </svg>

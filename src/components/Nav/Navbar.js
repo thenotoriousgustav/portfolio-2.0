@@ -1,6 +1,7 @@
 import { useState, useEffect, useRef } from "react";
 import { gsap, Power3 } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
+import NavItem from "./NavItem";
 
 export default function Navbar() {
   gsap.registerPlugin(ScrollTrigger);
@@ -85,43 +86,14 @@ export default function Navbar() {
         </button>
       </div>
 
-      <div
-        className='fixed -left-full z-40 block h-screen w-screen bg-white pt-24 font-neue text-4xl text-black md:pt-8 md:text-5xl lg:text-7xl'
-        ref={slide}
-      >
-        <ul className='mt-24 flex flex-col text-center xs:space-y-5 md:mt-10 md:space-y-0'>
-          <li ref={menu1} className='group'>
-            <img src='2.png' alt='images' className='nav-hover'></img>
-            <a href='/' className='xs:px-2 md:px-8'>
-              HOME
-            </a>
-          </li>
-          <li ref={menu2} className='group'>
-            <a href='/' className='xs:px-2 md:px-8'>
-              ABOUT
-            </a>
-            <img src='2.png' alt='images' className='nav-hover'></img>
-          </li>
-          <li ref={menu3} className='group'>
-            <img src='2.png' alt='images' className='nav-hover'></img>
-            <a href='/' className='xs:px-2 md:px-8'>
-              PROJECT
-            </a>
-          </li>
-          <li ref={menu4} className='group'>
-            <a href='/' className='xs:px-2 md:px-8'>
-              ARCHIVE
-            </a>
-            <img src='2.png' alt='images' className='nav-hover'></img>
-          </li>
-          <li ref={menu5} className='group'>
-            <img src='2.png' alt='images' className='nav-hover'></img>
-            <a href='/' className='xs:px-2 md:px-8'>
-              CONTACT
-            </a>
-          </li>
-        </ul>
-      </div>
+      <NavItem
+        menu1={menu1}
+        menu2={menu2}
+        menu3={menu3}
+        menu4={menu4}
+        menu5={menu5}
+        slide={slide}
+      />
     </nav>
   );
 }
