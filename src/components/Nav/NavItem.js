@@ -1,41 +1,47 @@
-import { Link } from "react-router-dom";
-
-export default function NavItem({ slide, menu1, menu2, menu3, menu4, menu5 }) {
+export default function NavItem({
+  slide,
+  menu1,
+  menu2,
+  menu3,
+  menu4,
+  menu5,
+  toggle,
+}) {
   return (
     <div
-      className='fixed -left-full z-40 block h-screen w-screen bg-white pt-24 font-neue text-4xl text-black md:pt-8 md:text-5xl lg:text-7xl'
+      className='fixed -left-full z-40 block h-screen w-screen bg-white pt-8 font-neue text-4xl text-black xs:pt-24 md:pt-4 md:text-7xl'
       ref={slide}
     >
-      <ul className='mt-24 flex flex-col text-center xs:space-y-5 md:mt-10 md:space-y-0'>
+      <ul className='mt-24 flex flex-col items-center space-y-4 text-center xs:space-y-5 md:mt-44 md:space-y-4 lg:mt-10 lg:space-y-2'>
         <li ref={menu1} className='group'>
           <img src='2.png' alt='images' className='nav-hover'></img>
-          <Link to='/' className='xs:px-2 md:px-8'>
+          <a href='/' className='px-2 md:px-4' onClick={toggle}>
             HOME
-          </Link>
+          </a>
         </li>
         <li ref={menu2} className='group'>
-          <Link to='/about' className='xs:px-2 md:px-8'>
+          <a href='#about' className='px-2 md:px-4' onClick={toggle}>
             ABOUT
-          </Link>
+          </a>
           <img src='2.png' alt='images' className='nav-hover'></img>
         </li>
         <li ref={menu3} className='group'>
           <img src='2.png' alt='images' className='nav-hover'></img>
-          <Link to='/' className='xs:px-2 md:px-8'>
-            PROJECT
-          </Link>
+          <a href='#work' className='px-2 md:px-4' onClick={toggle}>
+            WORK
+          </a>
         </li>
         <li ref={menu4} className='group'>
-          <Link to='/' className='xs:px-2 md:px-8'>
-            ARCHIVE
-          </Link>
+          <a href='#project' className='px-2 md:px-4' onClick={toggle}>
+            PROJECT
+          </a>
           <img src='2.png' alt='images' className='nav-hover'></img>
         </li>
         <li ref={menu5} className='group'>
           <img src='2.png' alt='images' className='nav-hover'></img>
-          <Link to='/contact' className='xs:px-2 md:px-8'>
+          <a href='#contact' className='px-2 md:px-4' onClick={toggle}>
             CONTACT
-          </Link>
+          </a>
         </li>
       </ul>
     </div>

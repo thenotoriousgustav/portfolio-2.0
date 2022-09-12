@@ -39,7 +39,7 @@ progress::-moz-progress-bar {
 
 /* NAVIGATION HOVER */
 .nav-hover {
-  @apply inline-block scale-0 transform object-cover transition-all group-hover:scale-100 xs:h-14 xs:w-24 lg:h-28 lg:w-44;
+  @apply inline-block h-12 w-16 scale-0 transform object-cover transition-all group-hover:scale-100 xs:h-16 xs:w-24 md:h-24 md:w-36;
 }
 
 .marquee {

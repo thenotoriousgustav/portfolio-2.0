@@ -30,11 +30,13 @@ export default function Navbar() {
       paused: true,
       reversed: true,
     });
-    tl.current.to(slide.current, {
+
+    tl.current.to([slide.current, menus], {
       left: 0,
       duration: 1.5,
       ease: Power3.easeInOut,
     });
+
     tl.current.from(
       menus,
       0.8,
@@ -47,11 +49,15 @@ export default function Navbar() {
     navbar ? tl.current.play() : tl.current.reverse();
   }, [navbar]);
 
+  function handleNavbar() {
+    setNavbar(!navbar);
+  }
+
   return (
     <nav>
       <div className='fixed z-50 flex w-full justify-between px-4 py-5 text-green-500 lg:px-14'>
         <h3>GUSTAM.</h3>
-        <button onClick={() => setNavbar(!navbar)}>
+        <button onClick={handleNavbar}>
           {navbar ? (
             <svg
               xmlns='http://www.w3.org/2000/svg'
@@ -93,6 +99,7 @@ export default function Navbar() {
         menu4={menu4}
         menu5={menu5}
         slide={slide}
+        toggle={handleNavbar}
       />
     </nav>
   );

@@ -43,7 +43,7 @@ export default function ProjectSection() {
   }, []);
 
   return (
-    <section className='mt-48 px-4 text-white lg:px-14'>
+    <section className='mt-48 px-4 text-white lg:px-14' id='project'>
       <h2 className='font-neue text-3xl'>MY PROJECT</h2>
       <div className='mt-10'>
         {dataProject.map(({ img, title, id }) => {
@@ -86,8 +86,6 @@ export default function ProjectSection() {
             </div>
           );
         })}
-
-        <p className='mt-10 text-sm underline'>DISCOVER ALL MY PROJECTS.</p>
       </div>
     </section>
   );
