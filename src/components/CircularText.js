@@ -31,7 +31,7 @@ export default function CircularText({ children }) {
   a 37,37 0 1,1 -74,0'
         />
       </defs>
-      <text font-size='9.1'>
+      <text fontSize='9.1'>
         <textPath
           href='#circle'
           className='font-neue font-light tracking-widest'

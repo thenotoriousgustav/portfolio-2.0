@@ -12,8 +12,7 @@ export default function ProgressBar() {
       value: 100,
       ease: "none",
       scrollTrigger: {
-        trigger: "#footer",
-        scrub: 1,
+        scrub: 2,
       },
     });
   });

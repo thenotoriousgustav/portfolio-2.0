@@ -2,7 +2,7 @@ import Marquee from "./Marquee";
 
 export default function Footer() {
   return (
-    <main className='mt-28 lg:mt-48' id='footer'>
+    <main className='mt-28 lg:mt-48'>
       <Marquee />
       <div className='relative z-0 flex h-[120vh] items-center justify-center bg-background'>
         <h1 className='-mb-16 text-center font-neue text-4xl text-white md:text-7xl lg:text-9xl'>
