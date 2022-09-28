@@ -3,15 +3,17 @@ import Marquee from "./Marquee";
 export default function Footer() {
   return (
     <main className='mt-28 lg:mt-48'>
-      <Marquee />
-      <div className='relative z-0 flex h-[120vh] items-center justify-center bg-background'>
-        <h1 className='-mb-16 text-center font-neue text-4xl text-white md:text-7xl lg:text-9xl'>
+      <div className='overflow-hidden'>
+        <Marquee />
+      </div>
+      <div className='relative z-0 flex h-[100vh] items-center justify-center bg-background '>
+        <h1 className='w-10/12 text-center font-neue text-7xl text-white md:w-full lg:text-9xl'>
           GET IN TOUCH!
         </h1>
       </div>
 
       <footer
-        className='sticky left-0 bottom-0 -z-10 h-[100vh] w-screen bg-gray-600 p-4 text-white lg:p-8'
+        className='sticky left-0 bottom-0 -z-10 h-[100vh] w-screen bg-gray-600 p-4 text-white  lg:p-8'
         id='contact'
       >
         <div className='mt-16'>

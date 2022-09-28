@@ -1,7 +1,8 @@
 {
   "root": true,
   "project": {
-    "name": "portfolio-1"
+    "name": "portfolio-1",
+    "basePath": "/admin"
   },
   "api": {
     "projectId": "044z4z4y",

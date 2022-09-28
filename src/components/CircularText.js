@@ -18,7 +18,7 @@ export default function CircularText({ children }) {
       viewBox='0 0 100 100'
       width='100'
       height='100'
-      className='absolute inset-x-28 bottom-20 h-auto w-[15vh] fill-current xs:inset-x-36 xs:-bottom-16 md:bottom-10 md:left-4 md:w-[20vh] lg:left-11 lg:bottom-4 '
+      className='circle absolute inset-x-28 bottom-20 h-auto w-[15vh] fill-current xs:inset-x-36 xs:-bottom-16 md:bottom-10 md:left-4 md:w-[20vh] lg:left-10 lg:bottom-4'
       ref={rotate}
     >
       <defs>
