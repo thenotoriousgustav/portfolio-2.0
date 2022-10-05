@@ -5,7 +5,6 @@ import NavItem from "./NavItem";
 
 export default function Navbar() {
   gsap.registerPlugin(ScrollTrigger);
-  window.history.scrollRestoration = "manual";
 
   const [navbar, setNavbar] = useState(false);
 
